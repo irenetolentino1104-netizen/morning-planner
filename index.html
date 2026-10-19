@@ -10,6 +10,20 @@
   <header>
     <h1>Good morning</h1>
     <p class="date" id="today"></p>
+    <p class="quote" id="quote"></p>
+    <script>
+      const quotes = [
+        "Small steps still move you forward.",
+        "Do the hard thing first, then enjoy the rest.",
+        "Three good things done beats ten half-done.",
+        "Progress, not perfection.",
+        "Your future self will thank you for today.",
+        "Start where you are. Use what you have.",
+        "One task at a time is still a plan."
+      ];
+      const day = Math.floor(Date.now() / 86400000);
+      document.getElementById('quote').textContent = '“' + quotes[day % quotes.length] + '”';
+    </script>
     <p class="hint">Add your tasks, then tap ☆ to pick your top 3 in each list. Your tasks stay on this device only.</p>
   </header>
 
