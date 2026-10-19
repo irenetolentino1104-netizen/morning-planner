@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morning Planner</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Good morning</h1>
+    <p class="date" id="today"></p>
+    <p class="hint">Add your tasks, then tap ☆ to pick your top 3 in each list. Your tasks stay on this device only.</p>
+  </header>
+
+  <main>
+    <section class="list" data-list="work">
+      <h2>Work</h2>
+      <form><input placeholder="Add a work task…" maxlength="120" /><button>Add</button></form>
+      <h3>Top 3 today</h3>
+      <ul class="top"></ul>
+      <h3>Everything else</h3>
+      <ul class="rest"></ul>
+    </section>
+
+    <section class="list" data-list="personal">
+      <h2>Personal</h2>
+      <form><input placeholder="Add a personal task…" maxlength="120" /><button>Add</button></form>
+      <h3>Top 3 today</h3>
+      <ul class="top"></ul>
+      <h3>Everything else</h3>
+      <ul class="rest"></ul>
+    </section>
+  </main>
+
+  <footer><button id="newday">Start a new day (clear done tasks)</button></footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
